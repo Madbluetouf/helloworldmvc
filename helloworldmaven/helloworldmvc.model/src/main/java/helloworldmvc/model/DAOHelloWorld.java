@@ -1,5 +1,7 @@
 package helloworldmvc.model;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -24,7 +26,7 @@ public class DAOHelloWorld {
         return instance;
     }
     private void readFile(){
-        try(InputStream is= this.getClass().getResourceAsStream("/"+FileName)){
+        try(FileInputStream is=new FileInputStream(new File(FileName)) ){
             int c;
             helloWorldMessage = "";
             do{

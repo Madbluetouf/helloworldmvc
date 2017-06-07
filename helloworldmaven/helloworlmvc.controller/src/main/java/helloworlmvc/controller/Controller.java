@@ -8,10 +8,11 @@ public class Controller {
 		private final IView view;
 		private final IModel model;
 		
-		public Controller(final IView view, final IModel model) {
+		public Controller(IView _view, IModel _model) {
 			
-			this.view = view;
-			this.model = model;
+			super();
+			view = _view;
+			model = _model;
 		}
 		
 	public void run(){
